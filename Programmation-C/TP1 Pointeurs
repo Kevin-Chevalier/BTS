@@ -1,3 +1,29 @@
+********************************************************************************************************************************
+Exercice 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+char *moisNom(int numeroMois)
+{
+    char listeMois[12][10]={"Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"};
+    char *mois;
+    mois=(char *) malloc ((strlen(listeMois[numeroMois]))*sizeof(char));
+    strcpy(mois,listeMois[numeroMois-1]);
+    return mois;
+}
+
+
+int main()
+{
+    printf("%s\n",moisNom(1));
+    return 0;
+}
+
+
+********************************************************************************************************************************
+
 Exercice 3
 //Focntion swapFLoat
 
@@ -26,6 +52,8 @@ int main()
 
     return 0;
 }
+
+********************************************************************************************************************************
 //Discriminant
 
 #include <stdio.h>
@@ -82,4 +110,4 @@ printf("Résolution de l'équation du second degré.\n");
     return 0;
 }
 
-
+********************************************************************************************************************************
