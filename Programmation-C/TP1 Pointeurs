@@ -1,4 +1,7 @@
-Exercice 2
+Exercice 3
+//Focntion swapFLoat
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,3 +26,60 @@ int main()
 
     return 0;
 }
+//Discriminant
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int resoSecondDegre(float a, float b, float c, float *racine1, float *racine2){
+    float delta;
+
+    delta = b*b - 4*a*c;
+
+    if(delta >0){
+
+         *racine1 = ((-b - sqrt(delta)) / (2*a));
+         *racine2 = ((-b + sqrt(delta)) / (2*a));
+	 return 2;
+    }
+    else{
+	if(delta =0){
+	    *racine1 = (-b / (2*a));
+            *racine2 = *racine1;
+	    return 1;
+	}
+        else
+
+	    return 0;
+
+}
+}
+
+int  main(){
+
+    float a,b,c;
+    float r1,r2;
+    int nombre;
+
+printf("Résolution de l'équation du second degré.\n");
+    printf("a: ");
+    scanf("%f", &a);
+    printf("b: ");
+    scanf("%f", &b);
+    printf("c: ");
+    scanf("%f", &c);
+
+    nombre = resoSecondDegre(a, b, c, &r1,  &r2);
+
+    if(nombre == 2){
+        printf("racine1 = %f\t racine=2 : %f\n", r1, r2);
+    }else{
+	if (nombre == 1)
+	    printf("une racine double : %f\n", r1);
+	else
+            printf("Pas de  racine dans l'ensemble des réels.\n");
+    }
+    return 0;
+}
+
+
