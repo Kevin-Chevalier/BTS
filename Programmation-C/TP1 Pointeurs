@@ -1,0 +1,25 @@
+Exercice 2
+#include <stdio.h>
+#include <stdlib.h>
+
+void swapFloat (float *ptr1,float *ptr2)
+{
+    float c;
+    c=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=c;
+
+}
+
+
+int main()
+{
+    float a=1.2;
+    float b=2.8;
+    printf("Avant : \nvaleur a : %f \nValeur b : %f\n",a,b);
+    swapFloat(&a,&b);
+    printf("Apres : \nvaleur a : %f \nValeur b : %f",a,b);
+
+
+    return 0;
+}
