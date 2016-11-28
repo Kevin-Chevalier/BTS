@@ -146,4 +146,32 @@ int  main(){
 }
 
 ********************************************************************************************************************************
+Question 7
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char* saisirChaine(char *message){
+    char *nom;
+    char mot[255];
+
+    printf("%s", message);
+    scanf("%s", mot);
+
+    nom = (char*) malloc((strlen(mot)+1)*sizeof(char));
+    strcpy(nom, mot);
+
+    return nom;
+}
+
+
+int  main(){
+
+    char *nom;
+    nom = saisirChaine("Comment vous appelez-vous ? ");
+    printf("Vous vous appelez %s.\n", nom);
+
+
+    return 0;
+}
+********************************************************************************************************************************
