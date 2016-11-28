@@ -111,3 +111,39 @@ printf("Résolution de l'équation du second degré.\n");
 }
 
 ********************************************************************************************************************************
+Question 6
+#include <stdio.h>
+#include <stdlib.h>
+
+
+char* supprimerE(char chaine[]){
+    int i =0;
+    char *E;
+    char *s;
+
+    for(s=chaine ; *s; s++){
+        if( *s != 'e')
+            i++;
+    }
+    E = (char*)malloc( (i+1) * sizeof(char));
+    i = 0;
+    for( s=chaine; *s; s++){
+        if(*s != 'e'){
+            E[i] = *s;
+            i++;
+        }
+    }
+    return E;
+}
+int  main(){
+    char mot[50];
+    char *sensE;
+    printf("Donnez une phrase : ");
+    fgets(mot, sizeof(mot), stdin);
+    sensE = supprimerE(mot);
+    printf("%s\n", sensE);
+    return 0;
+}
+
+********************************************************************************************************************************
+
